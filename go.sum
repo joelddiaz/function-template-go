@@ -69,6 +69,10 @@ github.com/cncf/udpa/go v0.0.0-20200629203442-efcf912fb354/go.mod h1:WmhPx2Nbnht
 github.com/cncf/udpa/go v0.0.0-20201120205902-5459f2c99403/go.mod h1:WmhPx2Nbnhtbo57+VJT5O0JRkEi1Wbu0z5j0R8u5Hbk=
 github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
+github.com/crossplane-contrib/function-patch-and-transform v0.2.1 h1:8CNU6BGXWO+lqQw7t+calDuM9JEjQ61YYVA9fM9yv+8=
+github.com/crossplane-contrib/function-patch-and-transform v0.2.1/go.mod h1:B9hSlytx1BSH/zezwsRkLhcnEG1NHDQJE7Q5P4zxJGI=
+github.com/crossplane-contrib/provider-aws v0.46.0 h1:Qm6SqjHBr03VTfXkiqStYNo4zSYisSXex7IT5C9p+Zc=
+github.com/crossplane-contrib/provider-aws v0.46.0/go.mod h1:ujtETMysMjQAxP3YcKeQVJOYzbzZrU2pj+j9RHATwe8=
 github.com/crossplane/crossplane-runtime v1.14.0-rc.1 h1:kyW6HY9IbvnKWT0x9CbbErIeE5g7o0akferrVWntSg8=
 github.com/crossplane/crossplane-runtime v1.14.0-rc.1/go.mod h1:aOP+5W2wKpvthVs3pFNbVOe1jwrKYbJho0ThGNCVz9o=
 github.com/crossplane/crossplane-runtime v1.14.0 h1:MFo93iOJLvYaMCaCoyH2vFWsHebdA1kv3QdOm7hcm5k=

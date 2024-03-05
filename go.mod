@@ -16,6 +16,8 @@ require (
 
 require (
 	dario.cat/mergo v1.0.0 // indirect
+	github.com/crossplane-contrib/function-patch-and-transform v0.2.1 // indirect
+	github.com/crossplane-contrib/provider-aws v0.46.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/emicklei/go-restful/v3 v3.11.0 // indirect
 	github.com/evanphx/json-patch/v5 v5.6.0 // indirect
