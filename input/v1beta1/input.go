@@ -22,11 +22,10 @@ type Input struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	// Example is an example field. Replace it with whatever input you need. :)
-	// Example string `json:"example"`
+	// Extras holds whatever parameters you may want to pass to your function. Replace it with whatever input you need. :)
 	Extras Extras `json:"extras"`
 }
 
 type Extras struct {
-	TgwMode string `json:"tgwMode"`
+	ExampleFlag string `json:"exampleFlag"`
 }

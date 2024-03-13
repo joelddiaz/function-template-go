@@ -41,7 +41,7 @@ func TestRunFunction(t *testing.T) {
 						"apiVersion": "template.fn.crossplane.io/v1beta1",
 						"kind": "Input",
 						"extras": {
-							"tgwMode": "NoExtraBucket"
+							"exampleFlag": "NoExtraBucket"
 						}
 					}`),
 				},
@@ -68,7 +68,7 @@ func TestRunFunction(t *testing.T) {
 						"apiVersion": "template.fn.crossplane.io/v1beta1",
 						"kind": "Input",
 						"extras": {
-							"tgwMode": "ExtraBucket"
+							"exampleFlag": "ExtraBucket"
 						}
 					}`),
 				},

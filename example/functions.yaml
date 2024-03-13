@@ -2,10 +2,19 @@
 apiVersion: pkg.crossplane.io/v1beta1
 kind: Function
 metadata:
+  name: function-patch-and-transform
+spec:
+  package: xpkg.upbound.io/crossplane-contrib/function-patch-and-transform:v0.1.4
+---
+apiVersion: pkg.crossplane.io/v1beta1
+kind: Function
+metadata:
   name: function-template-go
   annotations:
     # This tells crossplane beta render to connect to the function locally.
     render.crossplane.io/runtime: Development
 spec:
   # This is ignored when using the Development runtime.
-  package: function-template-go
+  # But this would otherwise be set to wherever you published
+  # your crossplane function to.
+  package: docker.io/myuser/function-template-go:latest

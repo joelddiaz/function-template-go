@@ -35,6 +35,8 @@ $ docker build . --tag=runtime
 $ crossplane xpkg build -f package --embed-runtime-image=runtime
 ```
 
+You can use the yaml files in the [example](example/README.md) directory to test the function locally.
+
 [functions]: https://docs.crossplane.io/latest/concepts/composition-functions
 [go]: https://go.dev
 [function guide]: https://docs.crossplane.io/knowledge-base/guides/write-a-composition-function-in-go

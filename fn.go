@@ -68,10 +68,12 @@ func (f *Function) RunFunction(_ context.Context, req *fnv1beta1.RunFunctionRequ
 		f.log.Info("Desired COMPOSED resources", "dcr", dcr)
 	}
 
-	// Create a mapping to hold the resources to be returned
+	// Create a mapping to hold the resources to be returned when
+	// our function has completed.
 	newDesired := map[resource.Name]*resource.DesiredComposed{}
 
-	// Iterate through list of composed resources and change the name of any Bucket resources we come across
+	// Iterate through list of composed resources and in this example we
+	// will change the name of any Bucket resources we come across
 	for name, desiredRes := range dcr {
 		f.log.Debug("Checking on resource...", "key", name)
 		if desiredRes.Resource.GetKind() == "Bucket" {
@@ -83,7 +85,7 @@ func (f *Function) RunFunction(_ context.Context, req *fnv1beta1.RunFunctionRequ
 	}
 
 	// if the input is as expected, create and add a new S3 bucket to the map of resources
-	if in.Extras.TgwMode == "ExtraBucket" {
+	if in.Extras.ExampleFlag == "ExtraBucket" {
 		newBucket := &s3v1beta1.Bucket{
 			ObjectMeta: metav1.ObjectMeta{
 				Name: "NewXPlaneFnBucket",
@@ -109,6 +111,7 @@ func (f *Function) RunFunction(_ context.Context, req *fnv1beta1.RunFunctionRequ
 		f.log.Debug("Desired resource:", "name", k, "val", v)
 	}
 
+	// Send the map of new desired resources in our response.
 	if err := response.SetDesiredComposedResources(rsp, newDesired); err != nil {
 		response.Fatal(rsp, errors.Wrapf(err, "cannot set desired composed resources from %T", req))
 		return rsp, nil
